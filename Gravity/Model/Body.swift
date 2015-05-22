@@ -41,8 +41,6 @@ class Body: SKSpriteNode {
 		println(self.shape.fillColor.debugDescription)
 		
 		
-
-		println("YAS")
 		gravityField = SKFieldNode.radialGravityField()
 		gravityField.enabled = true
 		gravityField.strength = 3

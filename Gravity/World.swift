@@ -26,7 +26,7 @@ class World: SKNode {
 		
 		planet.physicsBody?.fieldBitMask = PhysicalConstants.planetCategory
 		planet.gravityField.categoryBitMask = PhysicalConstants.moonCategory
-		planet.physicsBody?.mass *= 50
+		planet.physicsBody?.mass *= 60
 		
 		moon = Body(texture: nil, color: SKColor.whiteColor(), size: CGSize(width: 10, height: 10))
 		moon.position = CGPoint(x: 300, y: 100)
