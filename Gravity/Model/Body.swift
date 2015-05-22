@@ -34,7 +34,7 @@ class Body: SKSpriteNode {
 		self.physicsBody?.dynamic = true
 		self.physicsBody?.mass = area / 50
 		self.physicsBody?.allowsRotation = true
-		self.physicsBody?.restitution = 0.3
+		self.physicsBody?.restitution = 0.9
 		self.physicsBody?.affectedByGravity = false
 		self.physicsBody?.fieldBitMask = PhysicalConstants.moonCategory
 		
@@ -44,9 +44,9 @@ class Body: SKSpriteNode {
 		gravityField = SKFieldNode.radialGravityField()
 		gravityField.enabled = true
 		gravityField.strength = 3
-		gravityField.region = SKRegion(radius: 10000)
+		gravityField.smoothness = 1
 		gravityField.falloff = 1
-		gravityField.minimumRadius = 50
+		gravityField.minimumRadius = 1
 		self.addChild(gravityField)
 
 		

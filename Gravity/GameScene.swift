@@ -31,7 +31,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 	
 	
 	override func mouseDown(theEvent: NSEvent) {
-		worldLayer.moon.physicsBody?.applyForce(CGVectorMake(-10000, 10000))
+		worldLayer.moon.physicsBody?.applyForce(CGVectorMake(-100, 100))
 		
 	}
 	
