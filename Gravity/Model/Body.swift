@@ -10,6 +10,72 @@ import Foundation
 import SpriteKit
 
 class Body: SKSpriteNode {
+	var shape: SKShapeNode!
+	var gravityField: SKFieldNode!
+	
+	var area: CGFloat {
+		get{return self.frame.width * self.frame.height}
+	}
+	
+	func setup(color: NSColor, _ size: CGSize) {
+		setShape(color, size)
+		setPhysics()
+	}
+	
+	func setShape(color: NSColor, _ size: CGSize) {
+		shape = SKShapeNode(circleOfRadius: size.width / 2)
+		shape.fillColor = color
+		shape.strokeColor = SKColor.clearColor()
+		addChild(shape)
+	}
+	
+	func setPhysics() {
+		self.physicsBody = SKPhysicsBody(circleOfRadius: shape.frame.width / 2)
+		self.physicsBody?.dynamic = true
+		self.physicsBody?.mass = area / 50
+		self.physicsBody?.allowsRotation = true
+		self.physicsBody?.restitution = 0.3
+		self.physicsBody?.affectedByGravity = false
+		self.physicsBody?.fieldBitMask = PhysicalConstants.moonCategory
+		
+		println(self.shape.fillColor.debugDescription)
+		
+		
+
+		println("YAS")
+		gravityField = SKFieldNode.radialGravityField()
+		gravityField.enabled = true
+		gravityField.strength = 3
+		gravityField.region = SKRegion(radius: 10000)
+		gravityField.falloff = 1
+		gravityField.minimumRadius = 50
+		self.addChild(gravityField)
+
+		
+		var s = CFAbsoluteTimeGetCurrent()
+	}
+	
+	func update() {
+		println("\(self.name)")
+		println("    position: \(self.position)")
+		println("    mass: \(self.physicsBody?.mass)")
+		println("    field: \(self.gravityField.position)")
+		
+		if self.name == "moon" {
+			gravityField.strength = 1
+			gravityField.minimumRadius = 1
+		}
+	}
 	
 	
+	override init(texture: SKTexture!, color: NSColor!, size: CGSize) {
+		super.init(texture: nil, color: nil, size: size)
+		setup(color, size)
+		
+	}
+	
+	required init?(coder aDecoder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
+	}
+
 }

@@ -8,21 +8,64 @@
 
 import SpriteKit
 
-class GameScene: SKScene {
-    override func didMoveToView(view: SKView) {
-        /* Setup your scene here */
-        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = "Hello, World!";
-        myLabel.fontSize = 65;
-        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
-        
-        self.addChild(myLabel)
-    }
-    
-    override func mouseDown(theEvent: NSEvent) {
+class GameScene: SKScene, SKPhysicsContactDelegate {
+	let zUserInterface: CGFloat = 10
+	
+	var worldLayer = World()
+	//let interfaceLayer = InterfaceLayer()
+	
+	
+	override func didMoveToView(view: SKView) {
+		self.anchorPoint = CGPointMake(0.5, 0.5)
+		setupContent()
+	}
+	
+	func setupContent() {
+		self.physicsWorld.contactDelegate = self
+		self.backgroundColor = SKColor.blackColor()
+		//interfaceLayer.zPosition = zUserInterface
+		addChild(worldLayer)
+		//addChild(interfaceLayer)
+		
+	}
+	
+	
+	override func mouseDown(theEvent: NSEvent) {
+		worldLayer.moon.physicsBody?.applyForce(CGVectorMake(-10000, 10000))
+		
+	}
+	
+	override func didSimulatePhysics() {
+		
+	}
+	
+	func centerOnNode(node: SKNode) {
+		var positionInScene = convertPoint(node.position, fromNode: node.parent!)
+		worldLayer.position = CGPointMake(worldLayer.position.x - positionInScene.x, worldLayer.position.y)
+	}
+	
+	func clear() {
+		var newScene = GameScene(size: CGSizeMake(view!.frame.size.width, view!.frame.size.height))
+		self.view?.presentScene(newScene)
+	}
+
+	
+	func didBeginContact(contact: SKPhysicsContact) {
+		
+	}
+	
+	func didEndContact(contact: SKPhysicsContact) {
+		
 	}
     
     override func update(currentTime: CFTimeInterval) {
-        /* Called before each frame is rendered */
-    }
+		for child in children {
+			child.update()
+		}
+	}
+	
+	
 }
+
+
+

@@ -13,6 +13,8 @@
 		D20BD8411B0D7F3D001689E6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D20BD83F1B0D7F3D001689E6 /* MainMenu.xib */; };
 		D20BD84D1B0D7F3D001689E6 /* GravityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20BD84C1B0D7F3D001689E6 /* GravityTests.swift */; };
 		D20BD8571B0D81A3001689E6 /* Body.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20BD8561B0D81A3001689E6 /* Body.swift */; };
+		D20BD8591B0D8420001689E6 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20BD8581B0D8420001689E6 /* World.swift */; };
+		D20BD85B1B0E4D94001689E6 /* InterfaceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20BD85A1B0E4D94001689E6 /* InterfaceLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		D20BD84B1B0D7F3D001689E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D20BD84C1B0D7F3D001689E6 /* GravityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GravityTests.swift; sourceTree = "<group>"; };
 		D20BD8561B0D81A3001689E6 /* Body.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Body.swift; path = Model/Body.swift; sourceTree = "<group>"; };
+		D20BD8581B0D8420001689E6 /* World.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
+		D20BD85A1B0E4D94001689E6 /* InterfaceLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InterfaceLayer.swift; path = Model/InterfaceLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +82,10 @@
 			isa = PBXGroup;
 			children = (
 				D20BD8561B0D81A3001689E6 /* Body.swift */,
-				D20BD8371B0D7F3D001689E6 /* AppDelegate.swift */,
+				D20BD8581B0D8420001689E6 /* World.swift */,
+				D20BD85A1B0E4D94001689E6 /* InterfaceLayer.swift */,
 				D20BD8391B0D7F3D001689E6 /* GameScene.swift */,
+				D20BD8371B0D7F3D001689E6 /* AppDelegate.swift */,
 				D20BD83D1B0D7F3D001689E6 /* Images.xcassets */,
 				D20BD83F1B0D7F3D001689E6 /* MainMenu.xib */,
 				D20BD8351B0D7F3D001689E6 /* Supporting Files */,
@@ -212,7 +218,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D20BD8571B0D81A3001689E6 /* Body.swift in Sources */,
+				D20BD85B1B0E4D94001689E6 /* InterfaceLayer.swift in Sources */,
 				D20BD83A1B0D7F3D001689E6 /* GameScene.swift in Sources */,
+				D20BD8591B0D8420001689E6 /* World.swift in Sources */,
 				D20BD8381B0D7F3D001689E6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,6 +412,7 @@
 				D20BD8521B0D7F3D001689E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D20BD8531B0D7F3D001689E6 /* Build configuration list for PBXNativeTarget "GravityTests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +421,7 @@
 				D20BD8551B0D7F3D001689E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
