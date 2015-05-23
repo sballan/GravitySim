@@ -15,6 +15,20 @@
 		D20BD8571B0D81A3001689E6 /* Body.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20BD8561B0D81A3001689E6 /* Body.swift */; };
 		D20BD8591B0D8420001689E6 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20BD8581B0D8420001689E6 /* World.swift */; };
 		D20BD85B1B0E4D94001689E6 /* InterfaceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20BD85A1B0E4D94001689E6 /* InterfaceLayer.swift */; };
+		D2D179061B0FEA9000E31BF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D179051B0FEA9000E31BF7 /* AppDelegate.swift */; };
+		D2D1790C1B0FEA9000E31BF7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D1790B1B0FEA9000E31BF7 /* GameViewController.swift */; };
+		D2D1790F1B0FEA9000E31BF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2D1790D1B0FEA9000E31BF7 /* Main.storyboard */; };
+		D2D179111B0FEA9000E31BF7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2D179101B0FEA9000E31BF7 /* Images.xcassets */; };
+		D2D179141B0FEA9000E31BF7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2D179121B0FEA9000E31BF7 /* LaunchScreen.xib */; };
+		D2D179201B0FEA9000E31BF7 /* Gravity_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D1791F1B0FEA9000E31BF7 /* Gravity_iOSTests.swift */; };
+		D2D179281B0FEB1600E31BF7 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20BD8391B0D7F3D001689E6 /* GameScene.swift */; };
+		D2D179291B0FEB1900E31BF7 /* InterfaceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20BD85A1B0E4D94001689E6 /* InterfaceLayer.swift */; };
+		D2D1792A1B0FEB1C00E31BF7 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20BD8581B0D8420001689E6 /* World.swift */; };
+		D2D1792B1B0FEB1E00E31BF7 /* Body.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20BD8561B0D81A3001689E6 /* Body.swift */; };
+		D2D1792D1B0FED3900E31BF7 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2D1792C1B0FED3900E31BF7 /* SpriteKit.framework */; };
+		D2D1792E1B0FED4100E31BF7 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2D1792C1B0FED3900E31BF7 /* SpriteKit.framework */; };
+		D2D179301B0FED5500E31BF7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2D1792F1B0FED5500E31BF7 /* Cocoa.framework */; };
+		D2D179321B0FED6D00E31BF7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2D179311B0FED6D00E31BF7 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,6 +38,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = D20BD8311B0D7F3C001689E6;
 			remoteInfo = Gravity;
+		};
+		D2D1791A1B0FEA9000E31BF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D20BD82A1B0D7F3C001689E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2D179001B0FEA9000E31BF7;
+			remoteInfo = "Gravity iOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -40,6 +61,19 @@
 		D20BD8561B0D81A3001689E6 /* Body.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Body.swift; path = Model/Body.swift; sourceTree = "<group>"; };
 		D20BD8581B0D8420001689E6 /* World.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
 		D20BD85A1B0E4D94001689E6 /* InterfaceLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InterfaceLayer.swift; path = Model/InterfaceLayer.swift; sourceTree = "<group>"; };
+		D2D179011B0FEA9000E31BF7 /* Gravity iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gravity iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2D179041B0FEA9000E31BF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2D179051B0FEA9000E31BF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D2D1790B1B0FEA9000E31BF7 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		D2D1790E1B0FEA9000E31BF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D2D179101B0FEA9000E31BF7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D2D179131B0FEA9000E31BF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		D2D179191B0FEA9000E31BF7 /* Gravity iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Gravity iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2D1791E1B0FEA9000E31BF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2D1791F1B0FEA9000E31BF7 /* Gravity_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gravity_iOSTests.swift; sourceTree = "<group>"; };
+		D2D1792C1B0FED3900E31BF7 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		D2D1792F1B0FED5500E31BF7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		D2D179311B0FED6D00E31BF7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,10 +81,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2D179301B0FED5500E31BF7 /* Cocoa.framework in Frameworks */,
+				D2D1792D1B0FED3900E31BF7 /* SpriteKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D20BD8431B0D7F3D001689E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2D178FE1B0FEA9000E31BF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2D179321B0FED6D00E31BF7 /* UIKit.framework in Frameworks */,
+				D2D1792E1B0FED4100E31BF7 /* SpriteKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2D179161B0FEA9000E31BF7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -63,9 +115,15 @@
 		D20BD8291B0D7F3C001689E6 = {
 			isa = PBXGroup;
 			children = (
+				D2D179271B0FEA9F00E31BF7 /* Shared */,
 				D20BD8341B0D7F3D001689E6 /* Gravity */,
 				D20BD8491B0D7F3D001689E6 /* GravityTests */,
+				D2D179021B0FEA9000E31BF7 /* Gravity iOS */,
+				D2D1791C1B0FEA9000E31BF7 /* Gravity iOSTests */,
 				D20BD8331B0D7F3D001689E6 /* Products */,
+				D2D179311B0FED6D00E31BF7 /* UIKit.framework */,
+				D2D1792C1B0FED3900E31BF7 /* SpriteKit.framework */,
+				D2D1792F1B0FED5500E31BF7 /* Cocoa.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +132,8 @@
 			children = (
 				D20BD8321B0D7F3D001689E6 /* Gravity.app */,
 				D20BD8461B0D7F3D001689E6 /* GravityTests.xctest */,
+				D2D179011B0FEA9000E31BF7 /* Gravity iOS.app */,
+				D2D179191B0FEA9000E31BF7 /* Gravity iOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,10 +141,6 @@
 		D20BD8341B0D7F3D001689E6 /* Gravity */ = {
 			isa = PBXGroup;
 			children = (
-				D20BD8561B0D81A3001689E6 /* Body.swift */,
-				D20BD8581B0D8420001689E6 /* World.swift */,
-				D20BD85A1B0E4D94001689E6 /* InterfaceLayer.swift */,
-				D20BD8391B0D7F3D001689E6 /* GameScene.swift */,
 				D20BD8371B0D7F3D001689E6 /* AppDelegate.swift */,
 				D20BD83D1B0D7F3D001689E6 /* Images.xcassets */,
 				D20BD83F1B0D7F3D001689E6 /* MainMenu.xib */,
@@ -116,6 +172,56 @@
 				D20BD84B1B0D7F3D001689E6 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D2D179021B0FEA9000E31BF7 /* Gravity iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D2D179051B0FEA9000E31BF7 /* AppDelegate.swift */,
+				D2D1790B1B0FEA9000E31BF7 /* GameViewController.swift */,
+				D2D1790D1B0FEA9000E31BF7 /* Main.storyboard */,
+				D2D179101B0FEA9000E31BF7 /* Images.xcassets */,
+				D2D179121B0FEA9000E31BF7 /* LaunchScreen.xib */,
+				D2D179031B0FEA9000E31BF7 /* Supporting Files */,
+			);
+			path = "Gravity iOS";
+			sourceTree = "<group>";
+		};
+		D2D179031B0FEA9000E31BF7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D2D179041B0FEA9000E31BF7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D2D1791C1B0FEA9000E31BF7 /* Gravity iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				D2D1791F1B0FEA9000E31BF7 /* Gravity_iOSTests.swift */,
+				D2D1791D1B0FEA9000E31BF7 /* Supporting Files */,
+			);
+			path = "Gravity iOSTests";
+			sourceTree = "<group>";
+		};
+		D2D1791D1B0FEA9000E31BF7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D2D1791E1B0FEA9000E31BF7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D2D179271B0FEA9F00E31BF7 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				D20BD8561B0D81A3001689E6 /* Body.swift */,
+				D20BD8581B0D8420001689E6 /* World.swift */,
+				D20BD85A1B0E4D94001689E6 /* InterfaceLayer.swift */,
+				D20BD8391B0D7F3D001689E6 /* GameScene.swift */,
+			);
+			name = Shared;
+			path = Gravity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +262,41 @@
 			productReference = D20BD8461B0D7F3D001689E6 /* GravityTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		D2D179001B0FEA9000E31BF7 /* Gravity iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2D179251B0FEA9000E31BF7 /* Build configuration list for PBXNativeTarget "Gravity iOS" */;
+			buildPhases = (
+				D2D178FD1B0FEA9000E31BF7 /* Sources */,
+				D2D178FE1B0FEA9000E31BF7 /* Frameworks */,
+				D2D178FF1B0FEA9000E31BF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Gravity iOS";
+			productName = "Gravity iOS";
+			productReference = D2D179011B0FEA9000E31BF7 /* Gravity iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D2D179181B0FEA9000E31BF7 /* Gravity iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2D179261B0FEA9000E31BF7 /* Build configuration list for PBXNativeTarget "Gravity iOSTests" */;
+			buildPhases = (
+				D2D179151B0FEA9000E31BF7 /* Sources */,
+				D2D179161B0FEA9000E31BF7 /* Frameworks */,
+				D2D179171B0FEA9000E31BF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D2D1791B1B0FEA9000E31BF7 /* PBXTargetDependency */,
+			);
+			name = "Gravity iOSTests";
+			productName = "Gravity iOSTests";
+			productReference = D2D179191B0FEA9000E31BF7 /* Gravity iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -171,6 +312,13 @@
 					D20BD8451B0D7F3D001689E6 = {
 						CreatedOnToolsVersion = 6.3.2;
 						TestTargetID = D20BD8311B0D7F3C001689E6;
+					};
+					D2D179001B0FEA9000E31BF7 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					D2D179181B0FEA9000E31BF7 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = D2D179001B0FEA9000E31BF7;
 					};
 				};
 			};
@@ -189,6 +337,8 @@
 			targets = (
 				D20BD8311B0D7F3C001689E6 /* Gravity */,
 				D20BD8451B0D7F3D001689E6 /* GravityTests */,
+				D2D179001B0FEA9000E31BF7 /* Gravity iOS */,
+				D2D179181B0FEA9000E31BF7 /* Gravity iOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -204,6 +354,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D20BD8441B0D7F3D001689E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2D178FF1B0FEA9000E31BF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2D179141B0FEA9000E31BF7 /* LaunchScreen.xib in Resources */,
+				D2D179111B0FEA9000E31BF7 /* Images.xcassets in Resources */,
+				D2D1790F1B0FEA9000E31BF7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2D179171B0FEA9000E31BF7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -233,6 +400,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D2D178FD1B0FEA9000E31BF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2D179281B0FEB1600E31BF7 /* GameScene.swift in Sources */,
+				D2D179291B0FEB1900E31BF7 /* InterfaceLayer.swift in Sources */,
+				D2D1790C1B0FEA9000E31BF7 /* GameViewController.swift in Sources */,
+				D2D1792B1B0FEB1E00E31BF7 /* Body.swift in Sources */,
+				D2D179061B0FEA9000E31BF7 /* AppDelegate.swift in Sources */,
+				D2D1792A1B0FEB1C00E31BF7 /* World.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2D179151B0FEA9000E31BF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2D179201B0FEA9000E31BF7 /* Gravity_iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -240,6 +428,11 @@
 			isa = PBXTargetDependency;
 			target = D20BD8311B0D7F3C001689E6 /* Gravity */;
 			targetProxy = D20BD8471B0D7F3D001689E6 /* PBXContainerItemProxy */;
+		};
+		D2D1791B1B0FEA9000E31BF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2D179001B0FEA9000E31BF7 /* Gravity iOS */;
+			targetProxy = D2D1791A1B0FEA9000E31BF7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -250,6 +443,22 @@
 				D20BD8401B0D7F3D001689E6 /* Base */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		D2D1790D1B0FEA9000E31BF7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2D1790E1B0FEA9000E31BF7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D2D179121B0FEA9000E31BF7 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2D179131B0FEA9000E31BF7 /* Base */,
+			);
+			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -393,6 +602,80 @@
 			};
 			name = Release;
 		};
+		D2D179211B0FEA9000E31BF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Gravity iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D2D179221B0FEA9000E31BF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Gravity iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D2D179231B0FEA9000E31BF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Gravity iOSTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gravity iOS.app/Gravity iOS";
+			};
+			name = Debug;
+		};
+		D2D179241B0FEA9000E31BF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Gravity iOSTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gravity iOS.app/Gravity iOS";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -422,6 +705,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		D2D179251B0FEA9000E31BF7 /* Build configuration list for PBXNativeTarget "Gravity iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2D179211B0FEA9000E31BF7 /* Debug */,
+				D2D179221B0FEA9000E31BF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D2D179261B0FEA9000E31BF7 /* Build configuration list for PBXNativeTarget "Gravity iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2D179231B0FEA9000E31BF7 /* Debug */,
+				D2D179241B0FEA9000E31BF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

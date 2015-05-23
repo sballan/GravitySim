@@ -17,12 +17,12 @@ class Body: SKSpriteNode {
 		get{return self.frame.width * self.frame.height}
 	}
 	
-	func setup(color: NSColor, _ size: CGSize) {
-		setShape(color, size)
+	func setup(color: SKColor, _ size: CGSize) {
+		setShape(color: color, size: size)
 		setPhysics()
 	}
 	
-	func setShape(color: NSColor, _ size: CGSize) {
+	func setShape(#color: SKColor, size: CGSize) {
 		shape = SKShapeNode(circleOfRadius: size.width / 2)
 		shape.fillColor = color
 		shape.strokeColor = SKColor.clearColor()
@@ -37,9 +37,6 @@ class Body: SKSpriteNode {
 		self.physicsBody?.restitution = 0.9
 		self.physicsBody?.affectedByGravity = false
 		self.physicsBody?.fieldBitMask = PhysicalConstants.moonCategory
-		
-		println(self.shape.fillColor.debugDescription)
-		
 		
 		gravityField = SKFieldNode.radialGravityField()
 		gravityField.enabled = true
@@ -65,12 +62,14 @@ class Body: SKSpriteNode {
 		}
 	}
 	
+
+	override init(texture: SKTexture!, color: SKColor!, size: CGSize) {
+	super.init(texture: nil, color: nil, size: size)
+	setup(color, size)
 	
-	override init(texture: SKTexture!, color: NSColor!, size: CGSize) {
-		super.init(texture: nil, color: nil, size: size)
-		setup(color, size)
-		
 	}
+	
+
 	
 	required init?(coder aDecoder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")

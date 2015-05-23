@@ -7,6 +7,7 @@
 //
 
 import SpriteKit
+import Foundation
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
 	let zUserInterface: CGFloat = 10
@@ -17,6 +18,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 	
 	override func didMoveToView(view: SKView) {
 		self.anchorPoint = CGPointMake(0.5, 0.5)
+		println("we made it!")
 		setupContent()
 	}
 	
@@ -29,11 +31,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		
 	}
 	
-	
-	override func mouseDown(theEvent: NSEvent) {
+	#if TARGET_OS_IPHONE
+	override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
 		worldLayer.moon.physicsBody?.applyForce(CGVectorMake(-100, 100))
-		
 	}
+	
+	#endif
+	
+	#if !TARGET_OS_IPHONE
+	override func mouseDown(theEvent: NSEvent) {
+	worldLayer.moon.physicsBody?.applyForce(CGVectorMake(-100, 100))
+	
+	}
+	
+	#endif
 	
 	override func didSimulatePhysics() {
 		

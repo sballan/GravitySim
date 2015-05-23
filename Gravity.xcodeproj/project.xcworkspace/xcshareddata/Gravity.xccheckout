@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>89BEEFA1-F770-4817-972B-E92FB6A7B28A</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Gravity</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>7281A347BCE301D56B6E87FA308981814B82A3BF</key>
 		<string>https://github.com/sballan/GravitySim.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Gravity.xcodeproj/project.xcworkspace</string>
+	<string>Gravity.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>7281A347BCE301D56B6E87FA308981814B82A3BF</key>
