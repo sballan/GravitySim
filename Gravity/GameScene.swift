@@ -31,16 +31,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		
 	}
 	
-	#if TARGET_OS_IPHONE
+	#if os(iOS)
 	override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-		worldLayer.moon.physicsBody?.applyForce(CGVectorMake(-100, 100))
+		worldLayer.planet.physicsBody?.applyForce(CGVectorMake(-100, 100))
 	}
 	
-	#endif
-	
-	#if !TARGET_OS_IPHONE
+	#else
 	override func mouseDown(theEvent: NSEvent) {
-	worldLayer.moon.physicsBody?.applyForce(CGVectorMake(-100, 100))
+	worldLayer.planet.physicsBody?.applyForce(CGVectorMake(-100, 100))
 	
 	}
 	
