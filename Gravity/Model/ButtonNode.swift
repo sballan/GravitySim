@@ -12,8 +12,8 @@ import SpriteKit
 class ButtonNode: SKNode {
 	var text: SKLabelNode!
 	var background: SKShapeNode!
-	var cornerWidth: CGFloat = 5
-	var cornerHeight: CGFloat = 5
+	var cornerWidth: CGFloat = 4
+	var cornerHeight: CGFloat = 4
 	
 	var fontColor: SKColor {
 		set(newFontColor){self.text.fontColor = newFontColor}
@@ -35,23 +35,32 @@ class ButtonNode: SKNode {
 	
 	
 	convenience init(text: String) {
-		self.init(text: text, fontColor: SKColor.whiteColor())
+		self.init(text: text, fillColor: SKColor.darkGrayColor())
 	}
-
 	
-	init(text: String, fontColor: SKColor) {
+	convenience init(text: String, fillColor: SKColor) {
+		self.init(text: text, fontColor: SKColor.whiteColor(), fillColor: fillColor)
+	}
+	
+	init(text: String, fontColor: SKColor, fillColor: SKColor) {
 		super.init()
 		
-		self.text = SKLabelNode(text: text)
-		self.text.fontColor = fontColor
+
 		
-		self.background = SKShapeNode(rectOfSize: self.text.frame.size)
-		self.background.position.y += (self.text.frame.height / 2)
+		self.text = SKLabelNode(text: text)
+		
+		let textFrame = self.text.frame
+		var sizeRect = CGRectMake(textFrame.origin.x, textFrame.origin.y, textFrame.width, textFrame.height)
+		
+		self.background = SKShapeNode(path: CGPathCreateWithRoundedRect(sizeRect, self.cornerWidth, self.cornerHeight, nil))
+		
+		self.background.position.y -= 5
 		self.background.xScale = 1.3
 		self.background.yScale = 1.5
-		
-		self.background.fillColor = SKColor.darkGrayColor()
 		self.background.lineWidth = 0.1
+		
+		self.fillColor = fillColor
+		self.fontColor = fontColor
 		
 		addChild(self.text)
 		addChild(background)

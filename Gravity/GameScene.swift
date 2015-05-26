@@ -34,8 +34,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		
 	}
 	
-	
-	
 	 
 	#if os(iOS)
 	//----On iOS----
