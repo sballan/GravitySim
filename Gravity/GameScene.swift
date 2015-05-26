@@ -13,40 +13,89 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 	let zUserInterface: CGFloat = 10
 	
 	var worldLayer = World()
-	//let interfaceLayer = InterfaceLayer()
+	var interfaceLayer: Interface!
 	
 	
 	override func didMoveToView(view: SKView) {
 		self.anchorPoint = CGPointMake(0.5, 0.5)
-		println("we made it!")
 		setupContent()
 	}
 	
 	func setupContent() {
 		self.physicsWorld.contactDelegate = self
 		self.backgroundColor = SKColor.blackColor()
-		//interfaceLayer.zPosition = zUserInterface
+		
+		interfaceLayer = Interface()
+		interfaceLayer.zPosition = zUserInterface
 		addChild(worldLayer)
-		//addChild(interfaceLayer)
+		addChild(interfaceLayer)
+		
+		interfaceLayer.createContent()
 		
 	}
 	
+	
+	
+	
 	#if os(iOS)
+	//----On iOS----
+//	func makeVector(#touches: Set<NSObject>, node: SKNode) -> CGVector {
+//	
+//	}
+	
 	override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
 		worldLayer.planet.physicsBody?.applyForce(CGVectorMake(-100, 100))
 	}
 	
 	#else
-	override func mouseDown(theEvent: NSEvent) {
-	worldLayer.planet.physicsBody?.applyForce(CGVectorMake(-100, 100))
-	
+	//----On Mac----
+	func makeVector(#theEvent: NSEvent, node: SKNode) -> CGVector? {
+		var clickLocation = theEvent.locationInNode(self)
+		var nodeLocation = node.position
+		
+		var vectorNumber: Int = 100		
+		
+		switch (true) {
+		case clickLocation.x > 0 && clickLocation.y > 0:
+			return CGVector(dx: vectorNumber, dy: vectorNumber)
+			
+		case clickLocation.x < 0 && clickLocation.y > 0:
+			return CGVector(dx: -vectorNumber, dy: vectorNumber)
+			
+		case clickLocation.x > 0 && clickLocation.y < 0:
+			return CGVector(dx: vectorNumber, dy: -vectorNumber)
+			
+		case clickLocation.x < 0 && clickLocation.y < 0:
+			return CGVector(dx: -vectorNumber, dy: -vectorNumber)
+			
+		default: return nil
+		}
 	}
-	
+
+	override func mouseDown(theEvent: NSEvent) {
+		var node: SKNode = self.nodeAtPoint(theEvent.locationInNode(self))
+		
+		println(theEvent.locationInNode(self))
+		
+		if node.name == "resetButton" {
+			println("RESET")
+			worldLayer.removeFromParent()
+			worldLayer = World()
+			addChild(worldLayer)
+		}
+		
+		worldLayer.planet.physicsBody?.applyForce(makeVector(theEvent: theEvent, node: worldLayer.planet)!)
+	}
+
 	#endif
 	
+	//----Over----
+	
+	
 	override func didSimulatePhysics() {
-		
+
 	}
+	
 	
 	func centerOnNode(node: SKNode) {
 		var positionInScene = convertPoint(node.position, fromNode: node.parent!)
@@ -57,7 +106,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		var newScene = GameScene(size: CGSizeMake(view!.frame.size.width, view!.frame.size.height))
 		self.view?.presentScene(newScene)
 	}
-
 	
 	func didBeginContact(contact: SKPhysicsContact) {
 		
@@ -71,6 +119,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		for child in children {
 			child.update()
 		}
+		
+		
+		
 	}
 	
 	

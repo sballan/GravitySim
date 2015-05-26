@@ -9,15 +9,22 @@
 import Foundation
 import SpriteKit
 
-class InterfaceLayer: SKNode {
+class Interface: SKNode {
+	var resetButton: ButtonNode!
+	
+	func createContent() {
+		resetButton = ButtonNode(text: "Reset")
+		resetButton.name = "resetButton"
+		resetButton.position = CGPoint(x: 0, y: -(scene!.frame.height) / 2 + resetButton.frame.height + 30)
+		addChild(resetButton)
+		
+		
+	}
 	
 	
+	func update() {
 	
-	
-	
-	
-	
-	
+	}
 	
 	override init() {
 		super.init()

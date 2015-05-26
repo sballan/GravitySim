@@ -14,7 +14,7 @@ class Body: SKSpriteNode {
 	var gravityField: SKFieldNode!
 	
 	var area: CGFloat {
-		get{return self.frame.width * self.frame.height}
+		get{return (10 + self.frame.width) * (10 + self.frame.height) }
 	}
 	
 	func setup(color: SKColor, _ size: CGSize) {
@@ -34,13 +34,13 @@ class Body: SKSpriteNode {
 		self.physicsBody?.dynamic = true
 		self.physicsBody?.mass = area / 50
 		self.physicsBody?.allowsRotation = true
-		self.physicsBody?.restitution = 0.9
+		self.physicsBody?.restitution = 0.8
 		self.physicsBody?.affectedByGravity = false
 		self.physicsBody?.fieldBitMask = PhysicalConstants.moonCategory
 		
 		gravityField = SKFieldNode.radialGravityField()
 		gravityField.enabled = true
-		gravityField.strength = 3
+		gravityField.strength = 4
 		gravityField.smoothness = 1
 		gravityField.falloff = 1
 		gravityField.minimumRadius = 1
