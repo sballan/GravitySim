@@ -36,7 +36,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 	
 	
 	
-	
+	 
 	#if os(iOS)
 	//----On iOS----
 //	func makeVector(#touches: Set<NSObject>, node: SKNode) -> CGVector {
