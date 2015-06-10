@@ -11,53 +11,35 @@ import SpriteKit
 
 class World: SKNode {
 	
-	var sun: Body!
-	var planet: Body!
+	var sun: Sun!
+	var planet: Planet!
 	var moon: Body!
 	var gravityWell: SKFieldNode?
 	
 	func update() {
 		for child in children {
-			//child.update()
+			if(child.name == "gravityWell") {continue}
+		
+			child.update()
 		}
 	}
 	
 	func createContent() {
-		sun = Body(texture: nil, color: SKColor.yellowColor(), size: CGSize(width: 20, height: 20))
-		sun.name = "sun"
+		sun = Sun()
 		
-		sun.physicsBody?.fieldBitMask = PhysicalConstants.sunCategory
-		sun.gravityField.categoryBitMask = PhysicalConstants.planetCategory | PhysicalConstants.moonCategory
-		sun.physicsBody?.mass *= 1000000
-		
-		planet = Body(texture: nil, color: SKColor.lightGrayColor(), size: CGSize(width: 10, height: 10))
+		planet = Planet()
 		planet.position = CGPoint(x: 300, y: 100)
-		planet.name = "planet"
 		
-		planet.physicsBody?.fieldBitMask = PhysicalConstants.planetCategory
-		planet.gravityField.categoryBitMask = PhysicalConstants.sunCategory | PhysicalConstants.moonCategory
-		planet.gravityField.enabled = true
-		planet.gravityField.strength = 1
-		planet.physicsBody?.mass = 0.01
+		moon = Moon()
+		moon.position = CGPoint(x: 310, y: 110)
+
 		
 		gravityWell = SKFieldNode.radialGravityField()
+		gravityWell?.name = "gravityWell"
 		gravityWell!.enabled = true
 		gravityWell!.strength = 15
 		gravityWell!.falloff = 0
 		gravityWell?.categoryBitMask = PhysicalConstants.sunCategory
-		
-		
-		moon = Body(texture: nil, color: SKColor.whiteColor(), size: CGSize(width: 5, height: 5))
-		moon.position = CGPoint(x: 310, y: 110)
-		moon.name = "moon"
-		
-		moon.physicsBody?.fieldBitMask = PhysicalConstants.moonCategory
-		moon.gravityField.categoryBitMask = PhysicalConstants.planetCategory
-		moon.gravityField.enabled = true
-		moon.gravityField.strength = 0.0002
-		moon.physicsBody?.mass = 0.00004
-		
-		
 		
 
 	}

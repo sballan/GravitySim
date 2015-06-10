@@ -10,12 +10,31 @@ import Foundation
 import SpriteKit
 
 class Body: SKSpriteNode {
-	var shape: SKShapeNode!
+	var shape: SKShapeNode?
 	var gravityField: SKFieldNode!
 	
 	var area: CGFloat {
 		get{return (10 + self.frame.width) * (10 + self.frame.height) }
 	}
+	
+	var bodyColor: SKColor! {
+		get{
+			return self.shape!.fillColor
+		}
+		set(newColor){
+			self.shape?.fillColor = newColor
+		}
+	}
+	
+	var bodyName: String? {
+		set(newName) {
+			self.shape?.name = newName
+			self.gravityField.name = newName
+			self.name = newName
+		}
+		get{return self.name}
+	}
+	
 	
 	func setup(color: SKColor, _ size: CGSize) {
 		setShape(color: color, size: size)
@@ -24,19 +43,18 @@ class Body: SKSpriteNode {
 	
 	func setShape(#color: SKColor, size: CGSize) {
 		shape = SKShapeNode(circleOfRadius: size.width / 2)
-		shape.fillColor = color
-		shape.strokeColor = SKColor.clearColor()
-		addChild(shape)
+		shape?.fillColor = color
+		shape?.strokeColor = SKColor.clearColor()
+		addChild(shape!)
 	}
 	
 	func setPhysics() {
-		self.physicsBody = SKPhysicsBody(circleOfRadius: shape.frame.width / 2)
+		self.physicsBody = SKPhysicsBody(circleOfRadius: shape!.frame.width / 2)
 		self.physicsBody?.dynamic = true
 		self.physicsBody?.mass = area / 50
 		self.physicsBody?.allowsRotation = true
 		self.physicsBody?.restitution = 0.8
 		self.physicsBody?.affectedByGravity = false
-		self.physicsBody?.fieldBitMask = PhysicalConstants.moonCategory
 		
 		gravityField = SKFieldNode.radialGravityField()
 		gravityField.enabled = true
@@ -56,10 +74,6 @@ class Body: SKSpriteNode {
 		println("    mass: \(self.physicsBody?.mass)")
 		println("    field: \(self.gravityField.position)")
 		
-		if self.name == "moon" {
-			gravityField.strength = 1
-			gravityField.minimumRadius = 1
-		}
 	}
 	
 

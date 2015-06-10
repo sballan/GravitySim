@@ -118,8 +118,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 			child.update()
 		}
 		
-		
-		
 	}
 	
 	

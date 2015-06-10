@@ -17,6 +17,12 @@
 		D20BD85B1B0E4D94001689E6 /* Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20BD85A1B0E4D94001689E6 /* Interface.swift */; };
 		D24578F41B140DA10067E270 /* ButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24578F31B140DA10067E270 /* ButtonNode.swift */; };
 		D24578F51B140DA50067E270 /* ButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24578F31B140DA10067E270 /* ButtonNode.swift */; };
+		D2B8E0011B28C83C00855D12 /* Sun.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B8E0001B28C83C00855D12 /* Sun.swift */; };
+		D2B8E0021B28C83C00855D12 /* Sun.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B8E0001B28C83C00855D12 /* Sun.swift */; };
+		D2B8E0041B28D27C00855D12 /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B8E0031B28D27C00855D12 /* Planet.swift */; };
+		D2B8E0051B28D27C00855D12 /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B8E0031B28D27C00855D12 /* Planet.swift */; };
+		D2B8E0071B28D36700855D12 /* Moon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B8E0061B28D36700855D12 /* Moon.swift */; };
+		D2B8E0081B28D36700855D12 /* Moon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B8E0061B28D36700855D12 /* Moon.swift */; };
 		D2D179061B0FEA9000E31BF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D179051B0FEA9000E31BF7 /* AppDelegate.swift */; };
 		D2D1790C1B0FEA9000E31BF7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D1790B1B0FEA9000E31BF7 /* GameViewController.swift */; };
 		D2D1790F1B0FEA9000E31BF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2D1790D1B0FEA9000E31BF7 /* Main.storyboard */; };
@@ -64,6 +70,9 @@
 		D20BD8581B0D8420001689E6 /* World.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
 		D20BD85A1B0E4D94001689E6 /* Interface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Interface.swift; path = Model/Interface.swift; sourceTree = "<group>"; };
 		D24578F31B140DA10067E270 /* ButtonNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ButtonNode.swift; path = Model/ButtonNode.swift; sourceTree = "<group>"; };
+		D2B8E0001B28C83C00855D12 /* Sun.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sun.swift; path = Model/Sun.swift; sourceTree = "<group>"; };
+		D2B8E0031B28D27C00855D12 /* Planet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Planet.swift; path = Model/Planet.swift; sourceTree = "<group>"; };
+		D2B8E0061B28D36700855D12 /* Moon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Moon.swift; sourceTree = "<group>"; };
 		D2D179011B0FEA9000E31BF7 /* Gravity iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gravity iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2D179041B0FEA9000E31BF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2D179051B0FEA9000E31BF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -185,6 +194,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D2B8E0091B28D55200855D12 /* Sprites */ = {
+			isa = PBXGroup;
+			children = (
+				D2B8E0031B28D27C00855D12 /* Planet.swift */,
+				D2B8E0001B28C83C00855D12 /* Sun.swift */,
+				D2B8E0061B28D36700855D12 /* Moon.swift */,
+			);
+			name = Sprites;
+			sourceTree = "<group>";
+		};
 		D2D179021B0FEA9000E31BF7 /* Gravity iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +245,7 @@
 		D2D179271B0FEA9F00E31BF7 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				D2B8E0091B28D55200855D12 /* Sprites */,
 				D20BD8561B0D81A3001689E6 /* Body.swift */,
 				D20BD8581B0D8420001689E6 /* World.swift */,
 				D20BD85A1B0E4D94001689E6 /* Interface.swift */,
@@ -399,7 +419,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D20BD8571B0D81A3001689E6 /* Body.swift in Sources */,
+				D2B8E0071B28D36700855D12 /* Moon.swift in Sources */,
 				D24578F41B140DA10067E270 /* ButtonNode.swift in Sources */,
+				D2B8E0011B28C83C00855D12 /* Sun.swift in Sources */,
+				D2B8E0041B28D27C00855D12 /* Planet.swift in Sources */,
 				D20BD85B1B0E4D94001689E6 /* Interface.swift in Sources */,
 				D20BD83A1B0D7F3D001689E6 /* GameScene.swift in Sources */,
 				D20BD8591B0D8420001689E6 /* World.swift in Sources */,
@@ -419,8 +442,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2B8E0081B28D36700855D12 /* Moon.swift in Sources */,
 				D24578F51B140DA50067E270 /* ButtonNode.swift in Sources */,
 				D2D179281B0FEB1600E31BF7 /* GameScene.swift in Sources */,
+				D2B8E0021B28C83C00855D12 /* Sun.swift in Sources */,
+				D2B8E0051B28D27C00855D12 /* Planet.swift in Sources */,
 				D2D179291B0FEB1900E31BF7 /* Interface.swift in Sources */,
 				D2D1790C1B0FEA9000E31BF7 /* GameViewController.swift in Sources */,
 				D2D1792B1B0FEB1E00E31BF7 /* Body.swift in Sources */,
