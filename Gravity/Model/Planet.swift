@@ -20,13 +20,16 @@ class Planet: Body {
 		super.init(texture: nil, color: SKColor.lightGrayColor(), size: size)
 		self.bodyName = "planet"
 		
-		physicsBody?.fieldBitMask = PhysicalConstants.planetCategory
-		gravityField.categoryBitMask = PhysicalConstants.sunCategory | PhysicalConstants.moonCategory
+		physicsBody?.fieldBitMask = PhysicalConstants.moonCategory | PhysicalConstants.sunCategory
+		physicsBody?.categoryBitMask = PhysicalConstants.planetCategory
+		physicsBody?.contactTestBitMask = PhysicalConstants.moonCategory | PhysicalConstants.sunCategory
+		
+		gravityField.categoryBitMask = PhysicalConstants.planetCategory
 		
 		
 		self.gravityField.enabled = true
-		self.gravityField.strength = 1
-		self.physicsBody?.mass = 0.01
+		self.gravityField.strength = 0.8
+		self.physicsBody?.mass = 0.02
 		
 	}
 	

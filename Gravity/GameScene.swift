@@ -9,6 +9,9 @@
 import SpriteKit
 import Foundation
 
+//USE LAZY INITIALIZTION
+
+
 class GameScene: SKScene, SKPhysicsContactDelegate {
 	let zUserInterface: CGFloat = 10
 	
@@ -47,27 +50,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 	
 	#else
 	//----On Mac----
-	func makeVector(#theEvent: NSEvent, node: SKNode) -> CGVector? {
-		var clickLocation = theEvent.locationInNode(self)
-		var nodeLocation = node.position
+	func makeVector(#theEvent: NSEvent) -> CGVector? {
+		let clickLocation = theEvent.locationInNode(self)
+
+		return CGVector(dx: clickLocation.x / 2, dy: clickLocation.y / 2)
 		
-		var vectorNumber: Int = 100		
-		
-		switch (true) {
-		case clickLocation.x > 0 && clickLocation.y > 0:
-			return CGVector(dx: vectorNumber, dy: vectorNumber)
-			
-		case clickLocation.x < 0 && clickLocation.y > 0:
-			return CGVector(dx: -vectorNumber, dy: vectorNumber)
-			
-		case clickLocation.x > 0 && clickLocation.y < 0:
-			return CGVector(dx: vectorNumber, dy: -vectorNumber)
-			
-		case clickLocation.x < 0 && clickLocation.y < 0:
-			return CGVector(dx: -vectorNumber, dy: -vectorNumber)
-			
-		default: return nil
-		}
+	
 	}
 
 	override func mouseDown(theEvent: NSEvent) {
@@ -82,7 +70,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 			addChild(worldLayer)
 		}
 		
-		worldLayer.planet.physicsBody?.applyForce(makeVector(theEvent: theEvent, node: worldLayer.planet)!)
+		worldLayer.planet.physicsBody?.applyForce(makeVector(theEvent: theEvent)!)
 	}
 
 	#endif
@@ -91,7 +79,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 	
 	
 	override func didSimulatePhysics() {
-
+		
 	}
 	
 	
@@ -106,19 +94,24 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 	}
 	
 	func didBeginContact(contact: SKPhysicsContact) {
+		println("Contact")
+		var body = contact.bodyA.node as! Body
+		body.explode()
 		
+		
+
 	}
 	
 	func didEndContact(contact: SKPhysicsContact) {
 		
 	}
     
-    override func update(currentTime: CFTimeInterval) {
-		for child in children {
-			child.update()
-		}
-		
-	}
+//    override func update(currentTime: CFTimeInterval) {
+//		for child in children {
+//			child.update()
+//		}
+//		
+//	}
 	
 	
 }

@@ -20,8 +20,11 @@ class Moon: Body {
 		super.init(texture: nil, color: SKColor.whiteColor(), size: size)
 		self.bodyName = "moon"
 		
-		self.physicsBody?.fieldBitMask = PhysicalConstants.moonCategory
-		self.gravityField.categoryBitMask = PhysicalConstants.planetCategory
+		self.physicsBody?.fieldBitMask = PhysicalConstants.planetCategory | PhysicalConstants.sunCategory
+		self.physicsBody?.contactTestBitMask = PhysicalConstants.planetCategory | PhysicalConstants.sunCategory
+		self.physicsBody?.categoryBitMask = PhysicalConstants.moonCategory
+		
+		self.gravityField.categoryBitMask = PhysicalConstants.moonCategory
 		self.gravityField.enabled = true
 		self.gravityField.strength = 0.0002
 		self.physicsBody?.mass = 0.00004

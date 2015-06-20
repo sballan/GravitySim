@@ -16,13 +16,13 @@ class World: SKNode {
 	var moon: Body!
 	var gravityWell: SKFieldNode?
 	
-	func update() {
-		for child in children {
-			if(child.name == "gravityWell") {continue}
-		
-			child.update()
-		}
-	}
+//	func update() {
+//		for child in children {
+//			if(child.name == "gravityWell") {continue}
+//		
+//			child.update()
+//		}
+//	}
 	
 	func createContent() {
 		sun = Sun()
@@ -39,7 +39,8 @@ class World: SKNode {
 		gravityWell!.enabled = true
 		gravityWell!.strength = 15
 		gravityWell!.falloff = 0
-		gravityWell?.categoryBitMask = PhysicalConstants.sunCategory
+
+		gravityWell?.categoryBitMask = PhysicalConstants.wellCategory
 		
 
 	}
@@ -63,4 +64,5 @@ struct PhysicalConstants {
 	static let sunCategory: UInt32 = 2
 	static let planetCategory: UInt32 = 4
 	static let moonCategory: UInt32 = 8
+	static let wellCategory: UInt32 = 16
 }

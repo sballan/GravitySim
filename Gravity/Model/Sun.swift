@@ -20,8 +20,11 @@ class Sun: Body {
 		super.init(texture: nil, color: SKColor.yellowColor(), size: size)
 		self.bodyName = "sun"
 		
-		physicsBody?.fieldBitMask = PhysicalConstants.sunCategory
-		gravityField.categoryBitMask = PhysicalConstants.planetCategory | PhysicalConstants.moonCategory
+		physicsBody?.fieldBitMask = PhysicalConstants.moonCategory | PhysicalConstants.planetCategory | PhysicalConstants.wellCategory
+		physicsBody?.categoryBitMask = PhysicalConstants.sunCategory
+		physicsBody?.contactTestBitMask = PhysicalConstants.moonCategory | PhysicalConstants.planetCategory
+		
+		gravityField.categoryBitMask = PhysicalConstants.sunCategory
 		physicsBody?.mass *= 1000000
 		
 	}

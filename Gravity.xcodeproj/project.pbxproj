@@ -15,6 +15,10 @@
 		D20BD8571B0D81A3001689E6 /* Body.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20BD8561B0D81A3001689E6 /* Body.swift */; };
 		D20BD8591B0D8420001689E6 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20BD8581B0D8420001689E6 /* World.swift */; };
 		D20BD85B1B0E4D94001689E6 /* Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20BD85A1B0E4D94001689E6 /* Interface.swift */; };
+		D214AED31B35EB2400E52D4B /* ExplosionParticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = D214AED11B35EB2400E52D4B /* ExplosionParticles.sks */; };
+		D214AED41B35EB2400E52D4B /* ExplosionParticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = D214AED11B35EB2400E52D4B /* ExplosionParticles.sks */; };
+		D214AED51B35EB2400E52D4B /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = D214AED21B35EB2400E52D4B /* spark.png */; };
+		D214AED61B35EB2400E52D4B /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = D214AED21B35EB2400E52D4B /* spark.png */; };
 		D24578F41B140DA10067E270 /* ButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24578F31B140DA10067E270 /* ButtonNode.swift */; };
 		D24578F51B140DA50067E270 /* ButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24578F31B140DA10067E270 /* ButtonNode.swift */; };
 		D2B8E0011B28C83C00855D12 /* Sun.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B8E0001B28C83C00855D12 /* Sun.swift */; };
@@ -69,6 +73,8 @@
 		D20BD8561B0D81A3001689E6 /* Body.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Body.swift; path = Model/Body.swift; sourceTree = "<group>"; };
 		D20BD8581B0D8420001689E6 /* World.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
 		D20BD85A1B0E4D94001689E6 /* Interface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Interface.swift; path = Model/Interface.swift; sourceTree = "<group>"; };
+		D214AED11B35EB2400E52D4B /* ExplosionParticles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = ExplosionParticles.sks; path = ../ExplosionParticles.sks; sourceTree = "<group>"; };
+		D214AED21B35EB2400E52D4B /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spark.png; path = ../spark.png; sourceTree = "<group>"; };
 		D24578F31B140DA10067E270 /* ButtonNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ButtonNode.swift; path = Model/ButtonNode.swift; sourceTree = "<group>"; };
 		D2B8E0001B28C83C00855D12 /* Sun.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sun.swift; path = Model/Sun.swift; sourceTree = "<group>"; };
 		D2B8E0031B28D27C00855D12 /* Planet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Planet.swift; path = Model/Planet.swift; sourceTree = "<group>"; };
@@ -246,6 +252,8 @@
 			isa = PBXGroup;
 			children = (
 				D2B8E0091B28D55200855D12 /* Sprites */,
+				D214AED11B35EB2400E52D4B /* ExplosionParticles.sks */,
+				D214AED21B35EB2400E52D4B /* spark.png */,
 				D20BD8561B0D81A3001689E6 /* Body.swift */,
 				D20BD8581B0D8420001689E6 /* World.swift */,
 				D20BD85A1B0E4D94001689E6 /* Interface.swift */,
@@ -383,6 +391,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D20BD83E1B0D7F3D001689E6 /* Images.xcassets in Resources */,
+				D214AED51B35EB2400E52D4B /* spark.png in Resources */,
+				D214AED31B35EB2400E52D4B /* ExplosionParticles.sks in Resources */,
 				D20BD8411B0D7F3D001689E6 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,7 +408,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D214AED61B35EB2400E52D4B /* spark.png in Resources */,
 				D2D179141B0FEA9000E31BF7 /* LaunchScreen.xib in Resources */,
+				D214AED41B35EB2400E52D4B /* ExplosionParticles.sks in Resources */,
 				D2D179111B0FEA9000E31BF7 /* Images.xcassets in Resources */,
 				D2D1790F1B0FEA9000E31BF7 /* Main.storyboard in Resources */,
 			);

@@ -36,6 +36,15 @@ class Body: SKSpriteNode {
 	}
 	
 	
+	func explode() {
+		let sparks = SKEmitterNode(fileNamed: "ExplosionParticles")
+		sparks.numParticlesToEmit = 100
+		
+		self.parent!.addChild(sparks)
+		sparks.position.x = convertPoint(sparks.position, fromNode: self.parent!).x * -1
+		sparks.position.y = convertPoint(sparks.position, fromNode: self.parent!).y * -1
+	}
+	
 	func setup(color: SKColor, _ size: CGSize) {
 		setShape(color: color, size: size)
 		setPhysics()
@@ -52,7 +61,7 @@ class Body: SKSpriteNode {
 		self.physicsBody = SKPhysicsBody(circleOfRadius: shape!.frame.width / 2)
 		self.physicsBody?.dynamic = true
 		self.physicsBody?.mass = area / 50
-		self.physicsBody?.allowsRotation = true
+		self.physicsBody?.allowsRotation = false
 		self.physicsBody?.restitution = 0.8
 		self.physicsBody?.affectedByGravity = false
 		
@@ -69,10 +78,10 @@ class Body: SKSpriteNode {
 	}
 	
 	func update() {
-		println("\(self.name)")
-		println("    position: \(self.position)")
-		println("    mass: \(self.physicsBody?.mass)")
-		println("    field: \(self.gravityField.position)")
+//		println("\(self.name)")
+//		println("    position: \(self.position)")
+//		println("    mass: \(self.physicsBody?.mass)")
+//		println("    field: \(self.gravityField.position)")
 		
 	}
 	
@@ -82,8 +91,6 @@ class Body: SKSpriteNode {
 	setup(color, size)
 	
 	}
-	
-
 	
 	required init?(coder aDecoder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
