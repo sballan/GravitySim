@@ -203,8 +203,8 @@
 		D2B8E0091B28D55200855D12 /* Sprites */ = {
 			isa = PBXGroup;
 			children = (
-				D2B8E0031B28D27C00855D12 /* Planet.swift */,
 				D2B8E0001B28C83C00855D12 /* Sun.swift */,
+				D2B8E0031B28D27C00855D12 /* Planet.swift */,
 				D2B8E0061B28D36700855D12 /* Moon.swift */,
 			);
 			name = Sprites;
@@ -252,13 +252,13 @@
 			isa = PBXGroup;
 			children = (
 				D2B8E0091B28D55200855D12 /* Sprites */,
-				D214AED11B35EB2400E52D4B /* ExplosionParticles.sks */,
-				D214AED21B35EB2400E52D4B /* spark.png */,
 				D20BD8561B0D81A3001689E6 /* Body.swift */,
 				D20BD8581B0D8420001689E6 /* World.swift */,
 				D20BD85A1B0E4D94001689E6 /* Interface.swift */,
 				D24578F31B140DA10067E270 /* ButtonNode.swift */,
 				D20BD8391B0D7F3D001689E6 /* GameScene.swift */,
+				D214AED11B35EB2400E52D4B /* ExplosionParticles.sks */,
+				D214AED21B35EB2400E52D4B /* spark.png */,
 			);
 			name = Shared;
 			path = Gravity;

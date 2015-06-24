@@ -37,7 +37,7 @@ class World: SKNode {
 		gravityWell = SKFieldNode.radialGravityField()
 		gravityWell?.name = "gravityWell"
 		gravityWell!.enabled = true
-		gravityWell!.strength = 15
+		gravityWell!.strength = 18
 		gravityWell!.falloff = 0
 
 		gravityWell?.categoryBitMask = PhysicalConstants.wellCategory

@@ -13,11 +13,14 @@ class Sun: Body {
 	
 	
 	convenience init() {
-		self.init(size: CGSize(width: 20, height: 20))
+		self.init(size: CGSize(width: 25, height: 25))
 	}
 	
 	init(size: CGSize) {
 		super.init(texture: nil, color: SKColor.yellowColor(), size: size)
+		
+		self.massMultiplier = 1000000
+		self.gravityStrength = 5
 		self.bodyName = "sun"
 		
 		physicsBody?.fieldBitMask = PhysicalConstants.moonCategory | PhysicalConstants.planetCategory | PhysicalConstants.wellCategory
@@ -25,7 +28,9 @@ class Sun: Body {
 		physicsBody?.contactTestBitMask = PhysicalConstants.moonCategory | PhysicalConstants.planetCategory
 		
 		gravityField.categoryBitMask = PhysicalConstants.sunCategory
-		physicsBody?.mass *= 1000000
+		println("Gravity Field Strength: \(gravityField.strength)")
+		gravityField.strength = gravityStrength!
+		physicsBody?.mass *= massMultiplier!
 		
 	}
 

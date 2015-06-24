@@ -53,7 +53,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 	func makeVector(#theEvent: NSEvent) -> CGVector? {
 		let clickLocation = theEvent.locationInNode(self)
 
-		return CGVector(dx: clickLocation.x / 2, dy: clickLocation.y / 2)
+		return CGVector(dx: clickLocation.x, dy: clickLocation.y)
 		
 	
 	}
@@ -94,12 +94,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 	}
 	
 	func didBeginContact(contact: SKPhysicsContact) {
-		println("Contact")
 		var body = contact.bodyA.node as! Body
 		body.explode()
-		
-		
-
 	}
 	
 	func didEndContact(contact: SKPhysicsContact) {

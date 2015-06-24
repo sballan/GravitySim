@@ -11,13 +11,15 @@ import SpriteKit
 
 class Moon: Body {
 	
-	
 	convenience init() {
-		self.init(size: CGSize(width: 5, height: 5))
+		self.init(size: CGSize(width: 4, height: 4))
 	}
 	
 	init(size: CGSize) {
 		super.init(texture: nil, color: SKColor.whiteColor(), size: size)
+		
+		self.gravityStrength = 0.0000000001
+		self.massMultiplier = 0.001
 		self.bodyName = "moon"
 		
 		self.physicsBody?.fieldBitMask = PhysicalConstants.planetCategory | PhysicalConstants.sunCategory
@@ -26,9 +28,9 @@ class Moon: Body {
 		
 		self.gravityField.categoryBitMask = PhysicalConstants.moonCategory
 		self.gravityField.enabled = true
-		self.gravityField.strength = 0.0002
-		self.physicsBody?.mass = 0.00004
-		
+		self.gravityField.strength = gravityStrength!
+		self.physicsBody?.mass *= massMultiplier!
+		self.physicsBody?.restitution = 0.9
 	}
 	
 	required init?(coder aDecoder: NSCoder) {
